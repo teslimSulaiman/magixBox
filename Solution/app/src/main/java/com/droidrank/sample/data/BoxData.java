@@ -50,6 +50,12 @@ public class BoxData {
         }
         return result;
     }
+
+
+    public boolean isFieldEmpty(String numberOfColumns) {
+        return numberOfColumns.isEmpty();
+    }
+
     public boolean isOdd(int number){
 
         return number > 0 && number % 2 != 0;

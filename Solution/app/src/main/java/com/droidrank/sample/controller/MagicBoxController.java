@@ -29,7 +29,7 @@ public class MagicBoxController {
     public void onButtonClicked() {
 
         String   numberOfColumns = inputInterface.getNumberInput();
-        if (numberOfColumns.isEmpty()){
+        if (boxData.isFieldEmpty(numberOfColumns)){
             inputInterface.showInputError(R.string.error_empty);
             return;
         }
