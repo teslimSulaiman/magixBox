@@ -1,5 +1,9 @@
 package com.droidrank.sample.data;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by USER on 5/28/2018.
  */
@@ -9,6 +13,7 @@ public class BoxData {
     public String[] getBoxData(int n){
 
         int[][] magicSquare = new int[n][n];
+        String [] result = new String[n*n];
 
         int i = n/2;
         int j = n-1;
@@ -35,19 +40,14 @@ public class BoxData {
                 i++;
                 continue;
             }
-            else
+            else{
                 magicSquare[i][j] = num++;
+                result[i * n + j] = num -1 +"";
+            }
+
             j++; i--;
         }
-        String [] result = new String[n*n];
-        int count =0;
-        for(i=0; i<n; i++)
-        {
-            for(j=0; j<n; j++) {
-                result[count] = magicSquare[i][j]+"";
-                count++;
-            }
-        }
+
         return result;
     }
 
